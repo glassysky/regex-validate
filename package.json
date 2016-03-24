@@ -1,0 +1,19 @@
+{
+  "name": "regex-validate",
+  "version": "1.0.0",
+  "description": "An online regex express validater",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glassysky/regex-validate.git"
+  },
+  "author": "glassyskyCUI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glassysky/regex-validate/issues"
+  },
+  "homepage": "https://github.com/glassysky/regex-validate#readme"
+}
