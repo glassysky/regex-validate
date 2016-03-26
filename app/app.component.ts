@@ -1,19 +1,9 @@
 import {Component} from 'angular2/core';
+import {OnInit} from 'angular2/core';
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
-
-var HEROES: Hero[] = [
-    { "id": 11, "name": "Mr. Nice" },
-    { "id": 12, "name": "Narco" },
-    { "id": 13, "name": "Bombasto" },
-    { "id": 14, "name": "Celeritas" },
-    { "id": 15, "name": "Magneta" },
-    { "id": 16, "name": "RubberMan" },
-    { "id": 17, "name": "Dynama" },
-    { "id": 18, "name": "Dr IQ" },
-    { "id": 19, "name": "Magma" },
-    { "id": 20, "name": "Tornado" }
-];
+import {HEROES} from './mock-heroes';
+import {HeroService} from './hero.service';
 
 @Component({
     selector: 'my-app',
@@ -31,8 +21,9 @@ var HEROES: Hero[] = [
         
         <my-hero-detail [hero]="selectedHero"></my-hero-detail>
         
-        `,
+    `,
     directives: [HeroDetailComponent],
+    providers: [HeroService],
     styles:[`
         .selected {
             background-color: #CFD8DC !important;
@@ -85,9 +76,17 @@ var HEROES: Hero[] = [
 
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
     public heroes = HEROES;
     public title = 'Tour of Heroes';
     selectedHero: Hero;
+    heroes: Hero[];
     onSelect(hero: Hero) { this.selectedHero = hero; }
+    constructor(private _heroService: HeroService) {}
+    getHeroes() {
+        this.heroes = this._heroService.getHeroes();
+    }
+    ngOnInit() {
+        this.getHeroes();
+    }
 }
