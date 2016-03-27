@@ -1,4 +1,4 @@
-System.register(['angular2/core', './regex-test.component'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,33 +10,36 @@ System.register(['angular2/core', './regex-test.component'], function(exports_1,
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, regex_test_component_1;
-    var AppComponent;
+    var core_1;
+    var RegexTestComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (regex_test_component_1_1) {
-                regex_test_component_1 = regex_test_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
-                    this.title = 'Regex Online Test';
+            RegexTestComponent = (function () {
+                function RegexTestComponent() {
+                    this.keyMessage = "";
+                    this.regex = {
+                        "pattern": "",
+                        "text": ""
+                    };
                 }
-                AppComponent = __decorate([
+                RegexTestComponent.prototype.onPatternKey = function (event) {
+                    this.regex.pattern = event.target.value;
+                };
+                RegexTestComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: "\n        <h1>{{title}}</h1>\n        <my-regex-test></my-regex-test>\n    ",
-                        directives: [regex_test_component_1.RegexTestComponent],
+                        selector: 'my-regex-test',
+                        templateUrl: 'app/regex-test.component.html',
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], RegexTestComponent);
+                return RegexTestComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("RegexTestComponent", RegexTestComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=regex-test.component.js.map

@@ -26,7 +26,7 @@ System.register(['angular2/core', './hero'], function(exports_1, context_1) {
                 }
                 __decorate([
                     core_1.Input(), 
-                    __metadata('design:type', hero_1.Hero)
+                    __metadata('design:type', (typeof (_a = typeof hero_1.Hero !== 'undefined' && hero_1.Hero) === 'function' && _a) || Object)
                 ], HeroDetailComponent.prototype, "hero", void 0);
                 HeroDetailComponent = __decorate([
                     core_1.Component({
@@ -36,6 +36,7 @@ System.register(['angular2/core', './hero'], function(exports_1, context_1) {
                     __metadata('design:paramtypes', [])
                 ], HeroDetailComponent);
                 return HeroDetailComponent;
+                var _a;
             }());
             exports_1("HeroDetailComponent", HeroDetailComponent);
         }

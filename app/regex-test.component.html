@@ -1,0 +1,18 @@
+<div class="regex-pattern-part">
+    <label for="regex-pattern">正则表达式</label>
+    <input
+            type="text"
+            id="regex-pattern"
+            (keyup)="onPatternKey($event)"
+    >
+    <p>{{regex.pattern}}</p>
+</div>
+<div class="regex-text-part">
+    <div class="check-box-list">
+        <label for="common-pattern">
+            <input type="checkbox" id="common-pattern">
+        </label>
+    </div>
+    <label for="regex-text">匹配文本</label>
+    <textarea name="regext-text" id="regex-text" cols="30" rows="10"></textarea>
+</div>
