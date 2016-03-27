@@ -32,7 +32,8 @@ System.register(['angular2/core', './regex-pattern.component', './regex-text.com
                     this.keyMessage = "";
                     this.regex = {
                         "pattern": "",
-                        "text": ""
+                        "text": "",
+                        "result": []
                     };
                 }
                 RegexTestComponent = __decorate([

@@ -1,4 +1,4 @@
-System.register(['angular2/core', './regex'], function(exports_1, context_1) {
+System.register(['angular2/core', './regex', "./regex.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './regex'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, regex_1;
+    var core_1, regex_1, regex_service_1;
     var RegexPatternComponent;
     return {
         setters:[
@@ -19,13 +19,18 @@ System.register(['angular2/core', './regex'], function(exports_1, context_1) {
             },
             function (regex_1_1) {
                 regex_1 = regex_1_1;
+            },
+            function (regex_service_1_1) {
+                regex_service_1 = regex_service_1_1;
             }],
         execute: function() {
             RegexPatternComponent = (function () {
-                function RegexPatternComponent() {
+                function RegexPatternComponent(_regexService) {
+                    this._regexService = _regexService;
                 }
                 RegexPatternComponent.prototype.onPatternKey = function (event) {
                     this.regex.pattern = event.target.value;
+                    this.regex.text = this._regexService.matchRegex(this.regex);
                 };
                 __decorate([
                     core_1.Input(), 
@@ -35,9 +40,10 @@ System.register(['angular2/core', './regex'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'regex-pattern',
                         templateUrl: 'app/regex-pattern.component.html',
-                        styleUrls: []
+                        styleUrls: [],
+                        providers: [regex_service_1.RegexService]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [regex_service_1.RegexService])
                 ], RegexPatternComponent);
                 return RegexPatternComponent;
             }());

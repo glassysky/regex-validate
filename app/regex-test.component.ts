@@ -18,7 +18,8 @@ export class RegexTestComponent {
     constructor(){
         this.regex = {
             "pattern": "",
-            "text": ""
+            "text": "",
+            "result": []
         };
     }
 

@@ -1,5 +1,12 @@
 <regex-pattern [(regex)]="regex"></regex-pattern>
 <regex-checkbox></regex-checkbox>
 <regex-text [(regex)]="regex"></regex-text>
+
 <p>pattern: {{regex.pattern}}</p>
 <p>text: {{regex.text}}</p>
+
+<ul>
+    <li *ngFor="#string of regex.result">
+        {{string}}
+    </li>
+</ul>
