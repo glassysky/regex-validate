@@ -1,4 +1,4 @@
-System.register(['angular2/core', "./regex-pattern.component"], function(exports_1, context_1) {
+System.register(['angular2/core', './regex-pattern.component', './regex-text.component', './regex-checkbox.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', "./regex-pattern.component"], function(exports
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, regex_pattern_component_1;
+    var core_1, regex_pattern_component_1, regex_text_component_1, regex_checkbox_component_1;
     var RegexTestComponent;
     return {
         setters:[
@@ -19,6 +19,12 @@ System.register(['angular2/core', "./regex-pattern.component"], function(exports
             },
             function (regex_pattern_component_1_1) {
                 regex_pattern_component_1 = regex_pattern_component_1_1;
+            },
+            function (regex_text_component_1_1) {
+                regex_text_component_1 = regex_text_component_1_1;
+            },
+            function (regex_checkbox_component_1_1) {
+                regex_checkbox_component_1 = regex_checkbox_component_1_1;
             }],
         execute: function() {
             RegexTestComponent = (function () {
@@ -33,7 +39,7 @@ System.register(['angular2/core', "./regex-pattern.component"], function(exports
                     core_1.Component({
                         selector: 'my-regex-test',
                         templateUrl: 'app/regex-test.component.html',
-                        directives: [regex_pattern_component_1.RegexPatternComponent]
+                        directives: [regex_pattern_component_1.RegexPatternComponent, regex_text_component_1.RegexTextComponent, regex_checkbox_component_1.RegexCheckboxComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], RegexTestComponent);
