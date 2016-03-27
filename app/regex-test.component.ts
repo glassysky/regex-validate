@@ -7,6 +7,7 @@ import {RegexCheckboxComponent} from './regex-checkbox.component';
 @Component ({
     selector: 'my-regex-test',
     templateUrl: 'app/regex-test.component.html',
+    styleUrls: ['app/regex-test.component.css'],
     directives: [RegexPatternComponent, RegexTextComponent, RegexCheckboxComponent]
 })
 

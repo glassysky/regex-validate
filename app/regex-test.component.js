@@ -40,6 +40,7 @@ System.register(['angular2/core', './regex-pattern.component', './regex-text.com
                     core_1.Component({
                         selector: 'my-regex-test',
                         templateUrl: 'app/regex-test.component.html',
+                        styleUrls: ['app/regex-test.component.css'],
                         directives: [regex_pattern_component_1.RegexPatternComponent, regex_text_component_1.RegexTextComponent, regex_checkbox_component_1.RegexCheckboxComponent]
                     }), 
                     __metadata('design:paramtypes', [])

@@ -5,7 +5,7 @@ import {RegexService} from "./regex.service";
 @Component ({
     selector: 'regex-pattern',
     templateUrl: 'app/regex-pattern.component.html',
-    styleUrls: [],
+    styleUrls: ['app/regex-pattern.component.css'],
     providers: [RegexService]
 })
 

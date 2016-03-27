@@ -40,7 +40,7 @@ System.register(['angular2/core', './regex', "./regex.service"], function(export
                     core_1.Component({
                         selector: 'regex-text',
                         templateUrl: 'app/regex-text.component.html',
-                        styleUrls: [],
+                        styleUrls: ['app/regex-text.component.css'],
                         providers: [regex_service_1.RegexService]
                     }), 
                     __metadata('design:paramtypes', [regex_service_1.RegexService])
