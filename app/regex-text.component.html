@@ -1,2 +1,7 @@
 <label for="regex-text">匹配文本</label>
-<textarea name="regext-text" id="regex-text" cols="30" rows="10"></textarea>
+<textarea
+        name="regext-text"
+        id="regex-text" cols="30"
+        rows="10"
+        (keyup)="OnTextKey($event)"
+></textarea>

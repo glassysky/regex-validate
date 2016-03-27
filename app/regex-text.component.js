@@ -24,8 +24,11 @@ System.register(['angular2/core', './regex'], function(exports_1, context_1) {
             RegexTextComponent = (function () {
                 function RegexTextComponent() {
                 }
+                RegexTextComponent.prototype.OnTextKey = function (event) {
+                    this.regex.text = event.target.value;
+                };
                 __decorate([
-                    core_1.Input, 
+                    core_1.Input(), 
                     __metadata('design:type', regex_1.Regex)
                 ], RegexTextComponent.prototype, "regex", void 0);
                 RegexTextComponent = __decorate([
